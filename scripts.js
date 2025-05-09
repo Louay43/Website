@@ -29,7 +29,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
   button.textContent = 'Sending...';
 
   try {
-    const res = await fetch('http://localhost:10000/contact', {
+    const res = await fetch('https://website-l85r.onrender.com/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, subject, message })
