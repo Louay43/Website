@@ -1,0 +1,388 @@
+/* Base reset and typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Lilita One', sans-serif;
+    /* background-color: #242424; */
+    background-color: black;
+    color: #ffffffde;
+    line-height: 1.5;
+}
+
+/* Header styling */
+/* Header Container */
+.main-header {
+  background-color: #000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid orange;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-links a {
+  color: white;
+  font-weight: 800;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: orange;
+}
+
+/* Actions: Buttons */
+.nav-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Outline Button */
+.btn-outline {
+  padding: 0.6rem 1.4rem;
+  border: 2px solid orange;
+  border-radius: 2rem;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: orange;
+  color: #000;
+}
+
+/* Filled Button */
+.btn-fill {
+  padding: 0.6rem 1.4rem;
+  background-color: orange;
+  border: none;
+  border-radius: 2rem;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-fill:hover {
+  background-color: #e67300;
+}
+
+
+/* Logo or title */
+.title {
+    padding: 5%;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+/* About Section */
+.aboutMe {
+  padding: 4rem 2rem;
+  background-color: #2c2c2c;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5%;
+  margin: 1rem;
+}
+
+.aboutMe h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.aboutMe p {
+    margin-top: 4rem;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.louayPicture img {
+  float: left;
+  width: 30%;
+  height: auto;
+  border-radius: 10%;
+  margin-bottom: 1rem;
+  margin-right: 2rem;
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 4rem 2rem;
+  background-color: #1e1e1e;
+  color: white;
+  text-align: center;
+  border-radius: 5%;
+  margin: 1rem;
+}
+
+.skills-section h4 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.skills-section .skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 3rem;
+}
+
+.skills-section .skill-item {
+  background: #2e2e2e;
+  padding: 2rem;
+  border-radius: 10px;
+  flex: 1 1 40%;
+  max-width: 600px;
+  min-width: 300px;
+  text-align: left;
+  text-align: center;
+}
+
+.skills-section .skill-item h2 {
+  font-size: 1.75rem;
+  color: #646cff;
+  margin-bottom: 1rem;
+}
+
+.skills-section .skill-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #ccc;
+}
+
+.skills-section .skill-item img {
+  width: 40px;
+  height: 40px;
+  margin: 0.3rem;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+.skills-section .skill-item img:hover {
+  transform: scale(1.1);
+  
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 4rem 2rem;
+  background-color: #2c2c2c;
+  color: white;
+  text-align: center;
+}
+
+.projects-section h4 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.project-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+}
+
+/* Each Project Card */
+.project-card {
+  background-color: #3a3a3a;
+  border-radius: 10px;
+  padding: 2rem;
+  color: #fff;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card > p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+/* Content container: image + text side by side */
+.project-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.project-content img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.project-content img:hover {
+    transform: translateY(-10px);
+}
+
+.project-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+  text-align: left;
+  flex: 1;
+  margin: 0;
+}
+
+.project-content a:last-child {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #4080c0;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.project-content a:last-child:hover {
+  text-decoration: underline;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 4rem 2rem;
+  background-color: #0e0e0e;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-section form {
+  background-color: #0e0e0e;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 3rem 2rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.03);
+}
+
+.contact-section form h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+/* Input and Textarea Styling */
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #444;
+  padding: 0.75rem 0;
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-section input::placeholder,
+.contact-section textarea::placeholder {
+  color: #777;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border-bottom: 1px solid #646cff;
+}
+
+/* Submit Button */
+.contact-section button {
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+  background-color: #e67300;
+}
+
+/* Footer Section */
+footer {
+  background-color: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-icons img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.footer-icons img:hover {
+  transform: scale(1.1);
+}
+
+.footer-icons img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: invert(1);
+}
