@@ -113,14 +113,14 @@
                             <div class="project-card">
                                 <p>Facial Recognition Project</p>
                                 <div class="project-content">
-                                    <img src="./assets/louayPic.jpg" alt="facial recognition project">
+                                    <img src="./assets/FR.png" alt="facial recognition project">
                                     <p>
                                     • Built an interactive storytelling platform using <span style="color: gold; font-weight: bold;">Python</span> and the
                                     <span style="color: seagreen; font-weight: bold;">OpenCV</span> Library
                                     • Created a mechanism for users to train the model to recognize more faces<br>
                                     • Implemented a <span style="color: deepskyblue; font-weight: bold;">KNN</span> algorrithm for efficient facial recognition<br>
                                     • Save, label, and manage facial data for future recognition with features for tracking recognition.<br>
-                                    <a href="https://github.com/projectSenior1/storytelling" target="_blank">GitHub Repository →</a>
+                                    <a href="https://github.com/Louay43/Facial-Recognition" target="_blank">GitHub Repository →</a>
                                     </p>
                                 </div>
                             </div>
@@ -129,14 +129,14 @@
                             <div class="project-card">
                                 <p>Chess Project</p>
                                 <div class="project-content">
-                                    <img src="./assets/louayPic.jpg" alt="chess project">
+                                    <img src="./assets/Chess.png" alt="chess project">
                                     <p>
                                     • Built a fully functional chess game in <span style="color: gold; font-weight: bold;">Java</span> <br>
                                     • Implemented advanced mechanics including en passant, castling, pawn promotion, and board flipping<br>
                                     • Designed an intuitive UI using Java <span style="color: deepskyblue; font-weight: bold;">Swing</span> for a smooth and interactive gameplay experience<br>
                                     • Added real-time move previews and turn-based logic for player clarity
                                     • Developed the game as a standalone application with a focus on clean code structure and object-oriented design principles<br><br>
-                                    <a href="https://github.com/projectSenior1/storytelling" target="_blank">GitHub Repository →</a>
+                                    <a href="./assets/Chess.zip" download>Download Chess Game (Follow Instructions) →</a>
                                     </p>
                                 </div>
                             </div>
@@ -144,13 +144,14 @@
                             <div class="project-card">
                                 <p>"Mini Games" Projects</p>
                                 <div class="project-content">
-                                    <img src="./assets/louayPic.jpg" alt="Mini games">
+                                    <img src="./assets/FlappyBird.png" alt="Mini games">
                                     <p>
                                         • Developed a classic Snake game using <span style="color: seagreen; font-weight: bold;">Python</span>, featuring real-time movement, collision detection, and increasing difficulty<br>
                                         • Built a Flappy Bird clone in <span style="color: gold; font-weight: bold;">Java</span> with obstacle generation, gravity-based mechanics, and score tracking<br>
                                         • Designed intuitive 2D game interfaces with keyboard controls and real-time rendering<br>
                                         • Focused on fundamental game logic, clean structure, and responsive feedback loops<br><br>
-                                        <a href="https://github.com/your-repo/snake-and-flappy" target="_blank">GitHub Repository →</a>
+                                        <a href="./assets/snake.exe" download>Download Snake Game (Python NOT Required) →</a><br>
+                                        <a href="./assets/FlappyBird.zip" download>Download Flappy Bird Game (Follow Instructions) →</a>
                                     </p>
                                 </div>
                             </div>
@@ -169,31 +170,17 @@
                 <div class="contact-section">
 
                     
-                    <form  class="contact form">
-                        <h1  style="--Typography-textAlign: center;">Message Me</h1>
-                        <div class="form">
-
-                            <div class="name">
-                                <input type="Name" placeholder="Name" required="" name="name">
-                            </div>
-
-                            <div class="email">
-                                <input name="email" placeholder="Email" required="" type="email">
-                            </div>
-                            
-                            <div class="subject">
-                                
-                                <textarea rows="8"   name="message" placeholder="Your message.." required=""  style="height: 184px;" data-dashlane-rid="4f1faa5860692be6" data-dashlane-classification="other">
-                                </textarea>
-                                
-                            </div>
-                            
-                            <div class="submit">
-                                <button  tabindex="0" type="submit" >Send</button>
-                            </div>
-                            
-                        </div>
+                    <form id="contactForm">
+                        <h1>Contact Me</h1>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="text" name="subject" placeholder="Subject" required>
+                        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                        <button type="submit" id="submitBtn">Send</button>
                     </form>
+                    <p id="formStatus" style="color: lime; font-weight: bold;"></p>
+
+
                 </div>
                     
 
@@ -224,7 +211,7 @@
 
 
          </div>
-
+         <script src="scripts.js"></script>
      </body>
 
 </html>

@@ -271,7 +271,7 @@ body {
   margin: 0;
 }
 
-.project-content a:last-child {
+.project-content a {
   display: inline-block;
   margin-top: 1rem;
   color: #4080c0;
