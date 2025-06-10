@@ -59,7 +59,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
 });
 
 
-const images = ["./assets/sudoku.png", "./assets/sudoku2.png"]; 
+const images = ["./assets/sudoku.png", "./assets/Sudoku2.png"]; 
     let index = 0;
     const imgElement = document.getElementById("sudokuImage");
 
