@@ -58,3 +58,17 @@ document.getElementById('contactForm').addEventListener('submit', async function
   }, 5000);
 });
 
+
+const images = ["./assets/sudoku.png", "./assets/sudoku2.png"]; 
+    let index = 0;
+    const imgElement = document.getElementById("sudokuImage");
+
+    setInterval(() => {
+      imgElement.style.opacity = 0;
+
+      setTimeout(() => {
+        index = (index + 1) % images.length;
+        imgElement.src = images[index];
+        imgElement.style.opacity = 1;
+      }, 1000); 
+    }, 8000); 
