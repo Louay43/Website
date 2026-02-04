@@ -1,4 +1,3 @@
-
 document.getElementById('contactForm').addEventListener('submit', async function (e) {
   e.preventDefault();
 

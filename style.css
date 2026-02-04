@@ -199,6 +199,73 @@ body {
   
 }
 
+/* Work Experience Section */
+.experience-section {
+  padding: 4rem 2rem;
+  background-color: #1a1a1a;
+  color: white;
+  border-radius: 5%;
+  margin: 1rem;
+}
+
+.experience-section h4 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.experience-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.experience-item {
+  background: #2e2e2e;
+  padding: 2rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+}
+
+.experience-content {
+  display: block;
+}
+
+.experience-details {
+  width: 100%;
+}
+
+.experience-details h2 {
+  font-size: 1.5rem;
+  color: #646cff;
+  margin-bottom: 0.5rem;
+}
+
+.experience-details h3 {
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.experience-date {
+  font-size: 1rem;
+  color: #888;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.experience-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
 /* Projects Section */
 .projects-section {
   padding: 4rem 2rem;
