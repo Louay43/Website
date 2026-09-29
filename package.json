@@ -1,0 +1,8 @@
+{
+  "name": "louay-dridi-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Louay Dridi's portfolio. Static HTML, CSS, and JavaScript.",
+  "scripts": { "dev": "node tools/serve.mjs", "build": "node tools/build.mjs", "test": "node --test tests/*.test.mjs" },
+  "engines": { "node": ">=20" }
+}

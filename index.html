@@ -1,280 +1,73 @@
 <!doctype html>
 <html lang="en">
-      <head>
-         <meta charset="UTF-8">
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <title>Louay's Website</title>
-         <link href="https://fonts.googleapis.com/css2?family=Lilita+One&amp;display=swap" rel="stylesheet">
-         <link rel="stylesheet" href="style.css">
-     <body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101310">
+  <meta name="description" content="Louay Dridi — software engineer in Montréal. Infrastructure at Genetec, immersive applications, and machine learning built from first principles.">
+  <meta property="og:title" content="Louay Dridi — Software, from the inside out.">
+  <meta property="og:description" content="Infrastructure engineering, immersive experiences, and machine learning. Explore selected work by Louay Dridi.">
+  <meta property="og:type" content="website">
+  <title>Louay Dridi — Software Engineer</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="reading-progress" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="wordmark" href="#home" aria-label="Louay Dridi, home">ld<span class="brand-dot">.</span></a>
+    <button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false">Menu <span class="menu-lines" aria-hidden="true"></span></button>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <a href="#projects">Selected work</a><a href="#experience">Experience</a><a href="#about">About</a><a href="#contact">Contact</a>
+      <a class="nav-resume" href="assets/Louay-Dridi-Resume.pdf" download>Résumé <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero section-shell" id="home" aria-labelledby="hero-title">
+      <div class="hero-topline"><p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> LOUAY DRIDI / SOFTWARE ENGINEER</p><p class="location mono">MONTRÉAL, CANADA ↗</p></div>
+      <div class="hero-grid">
+        <div class="hero-copy"><h1 id="hero-title">Software,<br>from the<br><span class="accent-text">inside out.</span></h1><p class="hero-description">From infrastructure to immersive worlds to neural networks. I build things that work—and understand what makes them work.</p><div class="hero-actions"><a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↘</span></a><a class="text-link" href="https://github.com/Louay43" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div>
+        <div class="hero-lab" aria-label="Neural-network architecture visualization">
+          <div class="lab-topline"><span class="mono">01 / FROM SCRATCH</span><span class="lab-indicator mono">NUMPY</span></div>
+          <div class="network-stage"><canvas id="network-canvas" aria-hidden="true"></canvas><div class="network-labels mono" aria-hidden="true"><span>784<small>INPUT</small></span><span>128<small>HIDDEN</small></span><span>64<small>HIDDEN</small></span><span>10<small>OUTPUT</small></span></div></div>
+          <p class="visually-hidden">Architecture schematic: 784 inputs, hidden layers of 128 and 64 neurons, and 10 digit classes. Only representative nodes are drawn.</p>
+          <div class="lab-caption"><div><span class="lab-stat">98.16<span>%</span></span><p>MNIST test accuracy</p></div><a href="#neural-network" class="circle-link" aria-label="Explore the neural-network project">↗</a></div>
+          <div class="lab-bottom"><span class="mono">HANDWRITTEN GRADIENTS. REAL RESULTS.</span><button id="motion-toggle" type="button" aria-pressed="false" aria-label="Pause animations">Pause motion Ⅱ</button></div>
+        </div>
+      </div>
+      <div class="hero-bottom"><p><span class="status-dot" aria-hidden="true"></span> Currently building at <strong>Genetec</strong></p><p>Software Engineering Co-op <span class="muted">/</span> Concordia University</p><a class="scroll-cue mono" href="#projects">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
+    </section>
 
-         <div id="root">
+    <section class="work-section section-shell" id="projects" aria-labelledby="work-title">
+      <div class="section-heading reveal"><div><p class="eyebrow">01 / SELECTED WORK</p><h2 id="work-title">Ideas, made real<span class="accent-text">.</span></h2></div><p>A closer look at what I build,<br>and how I think.</p></div>
+      <article class="project-feature reveal" id="neural-network">
+        <div class="feature-copy"><div class="project-kicker"><span class="mono">01</span><span class="pill">FEATURED PROJECT</span></div><h3>Neural Network<br>From Scratch</h3><p>A digit classifier built from the math up. Every layer, gradient, and optimizer implemented by hand with NumPy. No training frameworks. No automatic differentiation.</p><ul class="tags" aria-label="Technologies"><li>Python</li><li>NumPy</li><li>Matplotlib</li></ul><div class="project-links"><a class="text-link" href="https://github.com/Louay43/Neural-Network" target="_blank" rel="noopener noreferrer">Explore the repository ↗</a><a class="subtle-link" href="assets/neural-learning-curves.png" target="_blank" rel="noopener noreferrer">Training curves ↗</a></div></div>
+        <div class="feature-evidence"><div class="evidence-title mono"><span>THE RESULTS</span><span>MNIST / 10,000 TEST IMAGES</span></div><div class="accuracy-display">98.16<span>%</span></div><p class="accuracy-label">test accuracy, independently verified</p><div class="evidence-grid"><div><strong>28</strong><span>passing tests</span></div><div><strong>30</strong><span>experiment runs</span></div><div><strong>0</strong><span>autodiff libraries</span></div></div><div class="evidence-note"><span aria-hidden="true">↳</span><p>SGD, momentum &amp; Adam · Numerical gradient checks · L2 &amp; dropout · Reproducible results</p></div></div>
+      </article>
+      <div class="project-grid">
+        <article class="project-card reveal"><a class="project-image" href="https://github.com/Louay43/Sudoku-Solver-app" target="_blank" rel="noopener noreferrer" aria-label="View Sudoku Solver source code"><img src="assets/sudoku.png" alt="Sudoku Solver desktop application showing its puzzle grid and controls" loading="lazy"><span class="image-label mono">NATIVE LOGIC. DESKTOP INTERFACE.</span></a><div class="project-body"><p class="project-kicker mono">02 / SYSTEMS &amp; DESKTOP</p><h3>Sudoku Solver Engine</h3><p>A constraint-propagation engine in C, connected to a C#/.NET Windows Forms application through a native DLL and P/Invoke.</p><ul class="tags"><li>C</li><li>C# / .NET</li><li>P/Invoke</li></ul><div class="project-links"><a class="text-link" href="https://github.com/Louay43/Sudoku-Solver-app" target="_blank" rel="noopener noreferrer">Source code ↗</a><a class="subtle-link" href="https://github.com/Louay43/Website/raw/refs/heads/main/assets/Sudoku.App-v1.2.zip">Windows app ↓</a></div><a class="subtle-link engine-link" href="https://github.com/Louay43/Sudoku-Engine" target="_blank" rel="noopener noreferrer">Explore the C engine ↗</a></div></article>
+        <article class="project-card reveal"><a class="project-image face-image" href="https://github.com/Louay43/Facial-Recognition" target="_blank" rel="noopener noreferrer" aria-label="View facial-recognition source code"><img src="assets/FR.png" alt="OpenCV facial-recognition application detecting and labeling a face" loading="lazy"><span class="image-label mono">DETECT. LABEL. RECOGNIZE.</span></a><div class="project-body"><p class="project-kicker mono">03 / COMPUTER VISION</p><h3>Facial Recognition</h3><p>An OpenCV recognition pipeline using K-nearest neighbors. Capture and label facial data, recognize faces, and grow the dataset over time.</p><ul class="tags"><li>Python</li><li>OpenCV</li><li>KNN</li></ul><div class="project-links"><a class="text-link" href="https://github.com/Louay43/Facial-Recognition" target="_blank" rel="noopener noreferrer">Source code ↗</a></div></div></article>
+      </div>
+      <article class="website-project reveal"><div class="website-project-label mono">04 / WEB DEVELOPMENT</div><div><h3>This corner of the internet.</h3><p>A responsive portfolio in HTML, CSS, and JavaScript, backed by a Node.js contact service on Render with Gmail delivery and environment-based configuration.</p></div><a class="circle-link" href="https://github.com/Louay43/Website" target="_blank" rel="noopener noreferrer" aria-label="View portfolio website source code">↗</a></article>
+      <details class="project-archive reveal"><summary><span>Earlier experiments <span class="muted">/ games &amp; interactive systems</span></span><span class="archive-plus" aria-hidden="true">+</span></summary><div class="archive-grid"><article><p class="mono">JAVA / SWING</p><h3>Chess</h3><p>Chess with castling, en passant, promotion, board flipping, and move previews.</p><a href="https://github.com/Louay43/Chess" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="assets/Chess.zip" download>Download ↓</a></article><article><p class="mono">PYTHON</p><h3>Snake</h3><p>Real-time movement, collision detection, and increasing difficulty in a classic arcade game.</p><a href="https://github.com/Louay43/Snake" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://github.com/Louay43/Website/raw/refs/heads/main/assets/snake.exe">Windows app ↓</a></article><article><p class="mono">JAVA</p><h3>Flappy Bird</h3><p>Gravity, obstacle generation, and score tracking in a responsive desktop game.</p><a href="https://github.com/Louay43/Flappy-Bird" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="assets/FlappyBird.zip" download>Download ↓</a></article></div></details>
+    </section>
 
+    <section class="experience-section section-shell" id="experience" aria-labelledby="experience-title"><div class="section-heading reveal"><div><p class="eyebrow">02 / EXPERIENCE</p><h2 id="experience-title">Built beyond<br>the classroom.</h2></div><p>Working across infrastructure,<br>immersive software, and applied AI.</p></div>
+      <article class="experience-row reveal"><div class="experience-company"><span class="pill">CURRENT</span><h3>Genetec</h3><p>Montréal, Québec</p></div><div class="experience-content"><div class="role-heading"><h4>Infrastructure Software Engineer</h4><p class="mono">MAY 2026 — PRESENT</p></div><ul><li>Led Security Center’s embedded-browser migration from CefSharp to Microsoft Edge WebView2, collaborating across teams.</li><li>Debugged multi-threaded C#/.NET services, investigating thread synchronization, asynchronous execution, and concurrency defects.</li><li>Performed STRIDE-based threat modeling and security impact assessments across attack vectors, trust boundaries, and authentication.</li></ul><ul class="tags"><li>C# / .NET</li><li>WebView2</li><li>Concurrency</li><li>STRIDE</li></ul></div></article>
+      <article class="experience-row reveal"><div class="experience-company"><span class="mono">IMMERSIVE + INTELLIGENT</span><h3>Clutch-VR</h3><p>Victoria, British Columbia</p></div><div class="experience-content"><div class="role-heading"><h4>VR Software Developer</h4><p class="mono">AUG 2025 — MAY 2026</p></div><ul><li>Led Unity and C# development for Meta Quest, improving design-review efficiency by 80%.</li><li>Integrated Firebase Realtime Database and Authentication for seamless data synchronization across sessions.</li><li>Trained a YOLOv11 football-play detection model using PyTorch and OpenCV preprocessing, achieving 96% mAP and reducing manual setup time by 60%.</li></ul><div class="experience-metrics"><div><strong>80<span>%</span></strong><p>better design-review efficiency</p></div><div><strong>96<span>%</span></strong><p>mean average precision</p></div><div><strong>60<span>%</span></strong><p>less manual setup time</p></div></div><ul class="tags"><li>Unity</li><li>C#</li><li>Meta Quest</li><li>Firebase</li><li>PyTorch</li><li>OpenCV</li></ul></div></article>
+    </section>
 
-            <!-- Header And Name-->
-            <div class="section" id="home">
+    <section class="about-section section-shell" id="about" aria-labelledby="about-title"><div class="about-grid"><div class="about-copy reveal"><p class="eyebrow">03 / THE PERSON BEHIND THE CODE</p><h2 id="about-title">Curiosity is<br>the common thread<span class="accent-text">.</span></h2><p>I’m Louay, a Software Engineering Co-op student at Concordia University in Montréal. I like working close to the details: how a thread behaves, how a model learns, how an experience feels.</p><p>My work spans native systems, full-stack development, virtual reality, and computer vision. Different tools, same instinct: understand the problem, then build with intention.</p><p class="personal-note"><span aria-hidden="true">✳</span> Off the clock? Games and a lasting appreciation for <em>Outer Wilds</em>.</p><div class="language-list"><span class="mono">HAPPY TO TALK IN</span><p>English <span>·</span> Français <span>·</span> العربية</p><small>Fluent in all three.</small></div></div><div class="about-aside reveal"><figure class="about-photo"><img src="assets/louayPic.jpg" alt="Louay at his computer workstation" width="828" height="1104" loading="lazy"><figcaption class="mono">ALWAYS CURIOUS. USUALLY AT A KEYBOARD.</figcaption></figure><div class="education-card"><p class="eyebrow">EDUCATION / 2024 — 2028</p><h3>Concordia University</h3><p>Bachelor of Engineering<br>Software Engineering Co-op</p><div class="education-bottom"><strong>4.12<span>/ 4.3 GPA</span></strong><span class="pill">DEAN’S LIST</span></div></div></div></div>
+      <div class="toolkit reveal" id="skills"><div class="toolkit-heading"><p class="eyebrow">THE TOOLKIT</p><p>The right tool starts with the right problem.</p></div><div class="skill-row"><h3>Languages</h3><p>C / C++ <span>·</span> C# <span>·</span> Java <span>·</span> Python <span>·</span> JavaScript <span>·</span> HTML &amp; CSS <span>·</span> PHP</p></div><div class="skill-row"><h3>Applications &amp; systems</h3><p>React <span>·</span> Node.js <span>·</span> .NET <span>·</span> PostgreSQL <span>·</span> Flutter <span>·</span> Git</p></div><div class="skill-row"><h3>AI &amp; immersive</h3><p>NumPy <span>·</span> PyTorch <span>·</span> OpenCV <span>·</span> Unity <span>·</span> Unreal Engine <span>·</span> Firebase</p></div></div>
+    </section>
 
-                <div class="HeaderAndName">
-                    <header class="main-header">
-                        <nav class="navbar">
-                            <ul class="nav-links">
-                                <li><a href="#home">HOME</a></li>
-                                <li><a href="#about">ABOUT ME</a></li>
-                                <li><a href="#skills">SKILLS</a></li>
-                                <li><a href="#experience">EXPERIENCE</a></li>
-                                <li><a href="#projects">PROJECTS</a></li>
-                                <li><a href="#contact">CONTACT</a></li>
-                            </ul>
-                            <div class="nav-actions">
-                                <a href="#contact" class="btn-outline">HIRE ME</a>
-                                <a href="./assets/Louay Résumé English.pdf" class="btn-fill" download>DOWNLOAD CV</a>
-                            </div>
-                        </nav>
-                    </header>
-
-                    <div class="title">
-                        <h1 >Louay Dridi</h1>
-                        <h2 >Portfolio</h2>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- About Me  -->
-            <div class="section" id="about">
-                <div class="aboutMe">
-
-                    <h1 >About me</h1>
-
-                    <div class="louayPicture">
-                        <img  src="./assets/LouayPic.jpg" alt="Profile illustration">
-                        <div class="aboutMeText">
-                            <p >I'm Louay Dridi, Software Engineering student at Concordia University with a strong passion 
-                                for full-stack development. I'm focused on building dynamic, responsive applications and enjoy working across 
-                                both the frontend and backend. I’m eager to apply my growing skills to real-world projects and continuously 
-                                evolve as a developer. My passion for video games and technology drives me to create engaging, user-friendly applications.
-                                <br><span style="color: blueviolet;">PS: My favorite game OAT is <span style="color: beige;">Outer Wilds.</span></span>
-                            </p>
-                        </div>
-                    </div>
-
-
-                    
-                </div>
-            </div>
-
-            <!-- Skills  -->
-            <div class="section" id="skills">
-                <div class="skills-section">
-                      
-                    <h4 >Skills</h4>
-
-                    <div class="skills-grid">
-
-                        <div class="skill-item">
-                            <h2 >Frontend Development</h2>
-                            <p >Building responsive and interactive user interfaces using HTML, CSS, JavaScript, and React. 
-                                Focused on creating clean, intuitive designs and smooth user experiences. 
-                                Proficient in developing dynamic layouts and components that adapt across devices and screen sizes.
-                            </p>
-                            <div >
-                                <img  src="./assets/react.png" alt="React" aria-label="React">
-                                <img  src="./assets/nextjs.svg" alt="Next.js" aria-label="Next.js">
-                                <img  src="./assets/html-5.png" alt="HTML5" aria-label="HTML5">
-                                <img  src="./assets/css-3.png" alt="CSS3" aria-label="CSS3">
-                                <img  src="./assets/javascript.png" alt="javascript" aria-label="javascript">
-                            </div>
-                        </div>
-
-                        <div class="skill-item">
-                            <h2 >Backend Development</h2>
-                            <p >Developing foundational backend systems using Java, Python, and C with a focus on clean, reliable code. 
-                                Comfortable working with Node.js and SQL to build server-side logic and manage databases. 
-                            </p>
-                            <div class="imageContainer">
-                                <img  src="./assets/node-js.png" alt="Node.js" aria-label="Node.js">  
-                                <img  src="./assets/php.png" alt="PHP" aria-label="PHP">
-                                <img  src="./assets/mysql.png" alt="MySQL" aria-label="MySQL">
-                                <img  src="./assets/java.png" alt="java" aria-label="java">
-                                <img  src="./assets/python.png" alt="python" aria-label="python">
-                                <img  src="./assets/C.png" alt="C" aria-label="C">
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>  
-            
-            <!-- Work Experience -->
-            <div class="section" id="experience">
-                <div class="experience-section">
-                      
-                    <h4 >Work Experience</h4>
-
-                    <div class="experience-grid">
-
-                        <div class="experience-item">
-                            <div class="experience-content">
-                                <div class="experience-details">
-                                    <h2>VLM Developer</h2>
-                                    <h3>Clutch-VR</h3>
-                                    <p class="experience-date">January 2026 - May 2026</p>
-                                    <p class="experience-description">
-                                        • Trained a <span style="color: gold; font-weight: bold;">YOLOv11</span> model for football play detection using <span style="color: orange; font-weight: bold;">PyTorch</span> and <span style="color: seagreen; font-weight: bold;">OpenCV</span> for preprocessing<br>
-                                        • Achieved <span style="color: lime; font-weight: bold;">96% mAP</span> accuracy in play detection and classification<br>
-                                        • Reduced manual setup time by <span style="color: cyan; font-weight: bold;">60%</span> through automated detection workflows<br>
-                                        • Developed computer vision pipelines for sports analytics and performance tracking
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="experience-item">
-                            <div class="experience-content">
-                                <div class="experience-details">
-                                    <h2>VR Software Developer</h2>
-                                    <h3>Clutch-VR</h3>
-                                    <p class="experience-date">August 2025 - January 2026</p>
-                                    <p class="experience-description">
-                                        • Led VR application development using <span style="color: deepskyblue; font-weight: bold;">Unity</span> and <span style="color: rgb(116, 219, 206); font-weight: bold;">C#</span> for <span style="color: orange; font-weight: bold;">Meta Quest</span> devices<br>
-                                        • Improved design-review efficiency by <span style="color: lime; font-weight: bold;">80%</span> through immersive VR workflows<br>
-                                        • Integrated <span style="color: gold; font-weight: bold;">Firebase Realtime Database</span> and Authentication for seamless data synchronization<br>
-                                        • Implemented <span style="color: rgb(240, 126, 202); font-weight: bold;">OpenXR</span> standards and tablet integration for cross-platform compatibility
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Projects -->
-            <div class="section" id="projects">
-                <div class="projects-section">
-
-                    <h4 >Projects</h4>
-
-                    <div class="project-grid">
-
-                            <div class="project-card">
-                                <p>Sudoku Engine Desktop App</p>
-                                <div class="project-content">
-                                    <img src="./assets/sudoku.png" alt="Sudoku Engine" id="sudokuImage">
-                                    <p>
-                                    • Developed the Sudoku engine solver logic in <span style="color: rgb(45, 213, 84); font-weight: bold;">C</span> for performance, compiled into a 
-                                     Sudoku.dll file<br>
-                                    • Designed the UI using <span style="color: rgb(116, 219, 206); font-weight: bold;">C#</span> and <span style="color: rgba(138, 120, 229, 0.995); font-weight: bold;">.NET</span> 
-                                     with Winforms allowing users to interact seamlessly with the puzzle grid<br>
-                                    • Integrated the game logic via <span style="color: rgb(240, 126, 202); font-weight: bold;">P/Invoke</span> ensuring smooth execution of core Sudoku functionalities<br>
-                                    • Led the full product development lifecycle, from initial design and implementation to ongoing maintenance<br>
-                                    <a href="./assets/Sudoku.App-v1.2.zip" download>Download Sudoku App (Windows Only, run SudokuSolver.exe) →</a>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="project-card">
-                                <p>Facial Recognition Project</p>
-                                <div class="project-content">
-                                    <img src="./assets/FR.png" alt="facial recognition project">
-                                    <p>
-                                    • Built an interactive storytelling platform using <span style="color: gold; font-weight: bold;">Python</span> and the
-                                    <span style="color: seagreen; font-weight: bold;">OpenCV</span> Library <br>
-                                    • Created a mechanism for users to train the model to recognize more faces<br>
-                                    • Implemented a <span style="color: deepskyblue; font-weight: bold;">KNN</span> algorrithm for efficient facial recognition<br>
-                                    • Save, label, and manage facial data for future recognition with features for tracking recognition.<br>
-                                    <a href="https://github.com/Louay43/Facial-Recognition" target="_blank">GitHub Repository →</a>
-                                    </p>
-                                </div>
-                            </div>
-
-
-                            <div class="project-card">
-                                <p>Chess Project</p>
-                                <div class="project-content">
-                                    <img src="./assets/Chess.png" alt="chess project">
-                                    <p>
-                                    • Built a fully functional chess game in <span style="color: gold; font-weight: bold;">Java</span> <br>
-                                    • Implemented advanced mechanics including en passant, castling, pawn promotion, and board flipping<br>
-                                    • Designed an intuitive UI using Java <span style="color: deepskyblue; font-weight: bold;">Swing</span> for a smooth and interactive gameplay experience<br>
-                                    • Added real-time move previews and turn-based logic for player clarity
-                                    • Developed the game as a standalone application with a focus on clean code structure and object-oriented design principles<br><br>
-                                    <a href="./assets/Chess.zip" download>Download Chess Game (Follow Instructions) →</a>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="project-card">
-                                <p>"Mini Games" Projects</p>
-                                <div class="project-content">
-                                    <img src="./assets/FlappyBird.png" alt="Mini games">
-                                    <p>
-                                        • Developed a classic Snake game using <span style="color: seagreen; font-weight: bold;">Python</span>, featuring real-time movement, collision detection, and increasing difficulty<br>
-                                        • Built a Flappy Bird clone in <span style="color: gold; font-weight: bold;">Java</span> with obstacle generation, gravity-based mechanics, and score tracking<br>
-                                        • Designed intuitive 2D game interfaces with keyboard controls and real-time rendering<br>
-                                        • Focused on fundamental game logic, clean structure, and responsive feedback loops<br><br>
-                                        <a href="./assets/snake.exe" download>Download Snake Game (Python NOT Required) →</a><br>
-                                        <a href="./assets/FlappyBird.zip" download>Download Flappy Bird Game (Follow Instructions) →</a>
-                                    </p>
-                                </div>
-                            </div>
-
-
-                    </div>
-
-                </div>
-            </div> 
-               
-   
-   
-            <!-- Contact Me and links-->
-            <div class="section" id="contact">
-
-                <div class="contact-section">
-
-                    
-                    <form id="contactForm" action="https://website-l85r.onrender.com/contact" method="POST">
-                        <h1>Contact Me</h1>
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <input type="text" name="subject" placeholder="Subject" required>
-                        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-                        <button type="submit" id="submitBtn">Send</button>
-                    </form>
-                    <p id="formStatus" style="color: lime; font-weight: bold;"></p>
-
-
-                </div>
-                    
-
-                <footer>
-                    <div class="footer-icons">
-                        <a href="https://github.com/Louay43" target="_blank" aria-label="GitHub">
-                            <img src="./assets/github.png" alt="GitHub">
-                        </a>
-                        <a href="https://www.linkedin.com/in/louay-dridi-336190306/" target="_blank" aria-label="LinkedIn">
-                             <img src="./assets/linkedin.png" alt="LinkedIn">
-                        </a>
-                        <a href="https://www.gmail.com/" target="_blank" aria-label="Gmail">
-                            <img src="./assets/gmail.png" alt="Gmail">
-                        </a>
-                        <a href="https://discordapp.com/users/luwulu6716" target="_blank" aria-label="Discord">
-                            <img src="./assets/discord.png" alt="Discord">
-                        </a>
-                        <a href="https://www.instagram.com/l0u._.lu/?hl=en" target="_blank" aria-label="Instagram">
-                            <img src="./assets/instagram.png" alt="Instagram">
-                        </a>
-                    </div>
-                </footer>
-
-
-                    
-            
-            </div>
-
-
-         </div>
-         <script src="scripts.js"></script>
-     </body>
-
+    <section class="contact-section section-shell" id="contact" aria-labelledby="contact-title"><div class="contact-intro reveal"><p class="eyebrow">04 / LET’S CONNECT</p><h2 id="contact-title">Have something<br>in mind<span class="accent-text">?</span></h2><p>For opportunities, collaborations, or a good technical conversation—my inbox is open.</p><a class="contact-email" href="mailto:louaydridi43@gmail.com">louaydridi43@gmail.com <span aria-hidden="true">↗</span></a><a class="contact-phone" href="tel:+15147958833">+1 514 795 8833</a><div class="contact-socials"><a href="https://www.linkedin.com/in/louay-dridi-336190306/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/Louay43" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="assets/Louay-Dridi-Resume.pdf" download>Download résumé ↓</a></div></div><form id="contactForm" class="contact-form reveal" action="https://website-l85r.onrender.com/contact" method="POST"><div class="form-row"><label for="name">Your name<input id="name" name="name" autocomplete="name" placeholder="Alex Morgan" maxlength="100" required></label><label for="email">Email address<input id="email" name="email" type="email" autocomplete="email" placeholder="alex@company.com" maxlength="254" required></label></div><label for="subject">Subject<input id="subject" name="subject" placeholder="An opportunity, an idea…" maxlength="200" required></label><label for="message">Your message<textarea id="message" name="message" rows="5" placeholder="Tell me a little about it." maxlength="5000" required></textarea></label><div class="form-bottom"><span class="mono">STRAIGHT TO MY INBOX.</span><button class="button button-primary" type="submit" id="submitBtn">Send message <span aria-hidden="true">↗</span></button></div><p id="formStatus" role="status" aria-live="polite"></p></form></section>
+  </main>
+  <footer class="site-footer section-shell"><a class="wordmark" href="#home" aria-label="Back to top">ld<span class="brand-dot">.</span></a><p>© <span id="year">2026</span> Louay Dridi. Built with intention.</p><div class="footer-links"><a href="https://discordapp.com/users/luwulu6716" target="_blank" rel="noopener noreferrer">Discord ↗</a><a href="https://www.instagram.com/l0u._.lu/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="#home">Back to top ↑</a></div></footer>
+</body>
 </html>
