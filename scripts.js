@@ -58,19 +58,19 @@
       for (let i = 0; i < counts[layer]; i++) for (let j = 0; j < counts[layer + 1]; j++) {
         const start = position(layer, i), end = position(layer + 1, j);
         ctx.beginPath(); ctx.moveTo(start.x, start.y); ctx.lineTo(end.x, end.y);
-        ctx.strokeStyle = (i + j) % 3 === 0 ? '#637c424d' : '#4054323d'; ctx.lineWidth = .8; ctx.stroke();
+        ctx.strokeStyle = (i + j) % 3 === 0 ? '#a2683d4d' : '#7950373d'; ctx.lineWidth = .8; ctx.stroke();
         const local = phase * 3.9 - layer;
         if ((i + j) % 4 === 0 && local > 0 && local < 1) {
           ctx.beginPath(); ctx.arc(start.x + (end.x - start.x) * local, start.y + (end.y - start.y) * local, 2, 0, Math.PI * 2);
-          ctx.fillStyle = '#c3f56b'; ctx.fill();
+          ctx.fillStyle = '#df8b45'; ctx.fill();
         }
       }
     }
     counts.forEach((count, layer) => {
       for (let i = 0; i < count; i++) {
         const p = position(layer, i), active = Math.abs(phase * 3.9 - layer) < .42;
-        ctx.beginPath(); ctx.arc(p.x, p.y, 5, 0, Math.PI * 2); ctx.fillStyle = active ? '#c3f56b' : '#202d1b'; ctx.fill();
-        ctx.strokeStyle = active ? '#dbffab' : '#87a866'; ctx.lineWidth = 1; ctx.stroke();
+        ctx.beginPath(); ctx.arc(p.x, p.y, 5, 0, Math.PI * 2); ctx.fillStyle = active ? '#df8b45' : '#30221a'; ctx.fill();
+        ctx.strokeStyle = active ? '#f5b778' : '#b7784b'; ctx.lineWidth = 1; ctx.stroke();
       }
     });
   }
